@@ -48,8 +48,8 @@ class Table extends Component<HeaderProps, MainState> {
 
     // calculate user age
     calculateUserAge = (bDay: string): number => {
-        // assuming that the date format is DD-MM-YYYY
-        const year = parseInt(bDay.split('-')[2])
+        // assuming that the date format is YYYY-MM-DD
+        const year = parseInt(bDay.split('-')[0])
         const currentYear = new Date().getFullYear()
 
         return currentYear - year;
@@ -201,8 +201,8 @@ class Table extends Component<HeaderProps, MainState> {
             </DragDropContext>
 
             <div id='control-buttons'>
-                {!this.state.deleteMode &&
-                <button className='danger' onClick={() => this.toggleDeleteMode()}>Delete Rows</button>}
+                {!this.state.deleteMode && list.length ?
+                <button className='danger' onClick={() => this.toggleDeleteMode()}>Delete Rows</button> : null}
                 {this.state.deleteMode && this.state.elementsToRemove.length ?
                     <button onClick={() => this.removeRow()} className='danger'>Confirm</button> : null}
                 {this.state.deleteMode &&

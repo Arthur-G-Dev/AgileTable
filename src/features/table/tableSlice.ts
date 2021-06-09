@@ -21,7 +21,7 @@ const initialState: Table = {
     list: [{
         firstName: {val: 'John', edit: false},
         lastName: {val: 'Doe', edit: false},
-        birthday: {val: '25-06-1990', edit: false}
+        birthday: {val: '2015-06-15', edit: false}
     }],
 }
 

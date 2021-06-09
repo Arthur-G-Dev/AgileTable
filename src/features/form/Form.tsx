@@ -21,7 +21,7 @@ const Form = () => {
             <input type="text" value={formData.lastName}
                    onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({...formData, lastName: e.target.value})}
                    placeholder='Last name'/>
-            <input type="text"
+            <input type="date"
                    value={formData.birthday}
                    onChange={(e: ChangeEvent<HTMLInputElement>) => setFormData({...formData, birthday: e.target.value})}
                    placeholder='Birthday'/>
