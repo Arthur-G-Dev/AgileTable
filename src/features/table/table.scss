@@ -1,0 +1,46 @@
+#table-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  .list-item {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid black;
+    position: relative;
+    & > * {
+      text-align: center;
+      padding: 0 20px;
+      margin: 0;
+      width: 100px;
+    }
+    input {
+      width: 100px;
+    }
+   .delete-row {
+     position: absolute;
+     right: -100px;
+     height: 17px;
+   }
+  }
+}
+
+#control-buttons {
+  display: flex;
+  justify-content: center;
+  button {
+    width: 100px;
+    height: 30px;
+    border: unset;
+    border-radius: 5px;
+    margin: 20px;
+    color: #fefefe;
+    cursor: pointer
+  }
+  .danger {
+    background-color: red;
+  }
+  .primary {
+    background-color: dodgerblue;
+  }
+}
